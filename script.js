@@ -1,9 +1,11 @@
 //your JS code here. If required.
+const colorSelect = document.getElementById('colorSelect');
+const removeBtn = document.getElementById('removeBtn');
+
 function removeItems() {
-	let selectedOption = document.getElementById('colorSelect').options[document.getElementById('colorSelect').selectedIndex];
+	const selectedOpt = colorSelect.options[colorSelect.selectedIndex];
 
-	selectedOption.remove();
-
+	selectedOpt.remove();
 }
 
-document.getElementById('removeBtn').addEventListner('click', removeItems);
+removeBtn.addEventListner('click', removeItems());
